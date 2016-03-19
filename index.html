@@ -89,9 +89,8 @@
                   </div>
                 </div>
                 
-                <hr>
 
-                <div class="container">
+                <div id="result" class="container hidden">
                   <div class="row">
                     <div class="col-lg-6">
                       <h2>Utilize este link</h2>
@@ -101,6 +100,10 @@
                           <button class="btn btn-default copy" data-clipboard-target="#tracked_url" type="button">Copiar</button>
                         </span>
                       </div><!-- /input-group -->
+                      <div id="copy-alert" class="alert alert-success hidden" style="margin-top:12px;">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        O link foi copiado para a área de transferência :)
+                      </div>
                     </div><!-- /.col-lg-6 -->
                   </div><!-- /.row -->
                 </div>
@@ -129,6 +132,9 @@
 
                 document.getElementById("tracked_url").value = new_link;
 
+                document.getElementById('result').classList.remove('hidden');
+                document.getElementById('result').classList.add('show');
+
               }
               </script>
               
@@ -137,6 +143,8 @@
 
               clipboard.on('success', function(e) {
                 console.log(e);
+                document.getElementById('copy-alert').classList.remove('hidden');
+                document.getElementById('copy-alert').classList.add('show');
               });
 
               clipboard.on('error', function(e) {
