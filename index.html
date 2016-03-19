@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<!--  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.8/dist/clipboard.min.js"></script> -->
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.8/dist/clipboard.min.js"></script>
   <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
@@ -86,49 +86,64 @@
                     <p style="margin-top:12px;">
                       <button type="button" class="btn btn-lg btn-primary" onclick="trackearUrl();">Trackear URL</button>
                     </p>
+                  </div>
                 </div>
-               </div>
                 
                 <hr>
 
                 <div class="container">
                   <div class="row">
-                    <h2>Utilize este link</h2>
-                    <p id="tracked_url"></p>
-                  </div>
+                    <div class="col-lg-6">
+                      <h2>Utilize este link</h2>
+                      <div class="input-group">
+                        <input id="tracked_url" type="text" class="form-control" placeholder="seu link aparecerá aqui">
+                        <span class="input-group-btn">
+                          <button class="btn btn-default copy" data-clipboard-target="#tracked_url" type="button">Copiar</button>
+                        </span>
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                  </div><!-- /.row -->
                 </div>
-
                 <hr>
 
                 <footer>
-                  <p>&copy; Company 2015</p>
+                  <p>&copy; Rica 2016</p>
                 </footer>
 
               </div> <!-- /container -->    
-                <script>
-                function trackearUrl() {
-                  var link        = document.getElementById("link").value;
-                  var medium      = document.getElementById("medium").value;
-                  var source      = document.getElementById("source").value;
-                  var campaign    = document.getElementById("campaign").value;
-                  // var url_pronta = ;
-                  console.log(link);
-                  console.log(medium);
-                  console.log(source);
-                  console.log(campaign);
 
-                  var new_link = link + "?utm_medium=" + medium + "?utm_source=" + source + "?utm_campaign=" + campaign;
+              <script>
+              function trackearUrl() {
+                var link        = document.getElementById("link").value;
+                var medium      = document.getElementById("medium").value;
+                var source      = document.getElementById("source").value;
+                var campaign    = document.getElementById("campaign").value;
 
-                  console.log(new_link);
+                var new_link  = link
+                + "?utm_medium="
+                + medium
+                + "?utm_source="
+                + source
+                + "?utm_campaign="
+                + campaign;
 
-                  document.getElementById("tracked_url").innerHTML = new_link;
+                document.getElementById("tracked_url").value = new_link;
 
-                  
-                  console.log(url_pronta);                  
-
-                }
-                </script>
+              }
+              </script>
               
+              <script>
+              var clipboard = new Clipboard('.copy');
+
+              clipboard.on('success', function(e) {
+                console.log(e);
+              });
+
+              clipboard.on('error', function(e) {
+                console.log(e);
+              });
+              </script>
+
               <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
               <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
