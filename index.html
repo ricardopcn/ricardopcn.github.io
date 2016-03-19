@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.8/dist/clipboard.min.js"></script>
+<!--  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.8/dist/clipboard.min.js"></script> -->
   <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
@@ -46,7 +46,7 @@
               <div class="jumbotron">
                 <div class="container">
                   <h1>Parâmetros de URL</h1>
-                  <p>Use esta ferramenta para montar um link trackeado pelo URL Builder, de acordo com o padrão da Resultados Digitais</p>
+                  <p>Use esta ferramenta para montar um link trackeado pelo URL Builder</p>
                   <p>
                     <div class="form-group">
                       <input id="link" class="form-control input-lg" type="text" placeholder="link a ser trackeado">
@@ -60,37 +60,42 @@
                 <div class="row">
                   <div class="col-md-4">
                     <h2>Canal</h2>
-                    <p>Por qual canal este link será divulgado?</p>
+                    <p>canal onde estará a URL</p>
                     <div class="input-group input-group-lg">
                       <input id="medium" type="text" class="form-control" aria-describedby="sizing-addon1">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <h2>Fonte</h2>
-                    <p>Insira o nome da fonte</p>
+                    <p>email, referral, banner...</p>
                     <div class="input-group input-group-lg">
                       <input id="source" type="text" class="form-control" aria-describedby="sizing-addon1">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <h2>Campanha</h2>
-                    <p>Insira o nome da campanha</p>
+                    <p>nome da campanha</p>
                     <div class="input-group input-group-lg">
                       <input id="campaign" type="text" class="form-control" aria-describedby="sizing-addon1">
                     </div>
                   </div>
                 </div>
+                
                 <div class="container">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-primary" onclick="trackearUrl();">Send bullet!</button>
-                  </div>
+                  <div class="row">
+                    <p style="margin-top:12px;">
+                      <button type="button" class="btn btn-lg btn-primary" onclick="trackearUrl();">Trackear URL</button>
+                    </p>
+                </div>
                </div>
                 
                 <hr>
 
                 <div class="container">
-                  <h2>Utilize este link</h2>
-                  <p id="tracked_url"></p>
+                  <div class="row">
+                    <h2>Utilize este link</h2>
+                    <p id="tracked_url"></p>
+                  </div>
                 </div>
 
                 <hr>
