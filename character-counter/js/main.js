@@ -13,7 +13,7 @@ yourtext.onkeyup = function() {
 	} else if (yourtext.value.length <= 50) {
 		email.innerHTML = "pode usar";
 	} else {
-		email.innerHTML = "não use";
+		email.innerHTML = "não use, o gmail vai cortar o seu assunto";
 	}
 
 	// twitter
@@ -24,7 +24,7 @@ yourtext.onkeyup = function() {
 	} else if (yourtext.value.length <= 140) {
 		email.innerHTML = "pode usar";
 	} else {
-		email.innerHTML = "não use";
+		email.innerHTML = "não use, o Twitter só permite 140 caracteres";
 	}
 
 }
