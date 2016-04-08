@@ -6,8 +6,8 @@ yourtext.onkeyup = function() {
 
 	len.innerHTML = yourtext.value.length;
 
-	if (yourtext.value.split(" ").length == 0) {
-		words.innerHTML = yourtext.value.split(" ").length + " palavras";
+	if (yourtext.value.length == 0) {
+		words.innerHTML = "0 palavras";
 	} else if (yourtext.value.split(" ").length == 1) {
 		words.innerHTML = yourtext.value.split(" ").length + " palavra";
 	} else {
