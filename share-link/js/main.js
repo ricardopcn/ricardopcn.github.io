@@ -27,9 +27,9 @@ clipboard.on('error', function(e) {
 /* twitter */
 function gerarLinkTwitter() {
   var tweet = document.getElementById("twitter").value;
-  var newTweet = 'https://twitter.com/home?status='
+  var newTweet = 'http://twitter.com/intent/tweet?text='
   + encodeURI(tweet);
-  
+
   document.getElementById("twitterTrackedUrl").value = newTweet;
   document.getElementById('twitterResult').classList.remove('hidden');
   document.getElementById('twitterResult').classList.add('show');
