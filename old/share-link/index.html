@@ -1,0 +1,197 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gerador de Links de Compartilhamento</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.8/dist/clipboard.min.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="http://ricardopcn.github.io/url-builder">Parâmetros de URL</a>
+                  <a class="navbar-brand" href="http://ricardopcn.github.io/share-link">Links de compartilhamento</a>
+                </div>
+              </nav>
+
+              <!-- Main jumbotron for a primary marketing message or call to action -->
+              <div class="jumbotron">
+                <div class="container">
+                  <h1>Gerador de links de compartilhamento</h1>
+                  <p>Use esta ferramenta para criar links de compartilhamento para Facebook, Twitter, LinkedIn, email e Google+ e coloque em emails, PDFs, etc.</p>
+                </div>
+              </div>
+
+              <div class="container">
+
+                <!-- Facebook -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Facebook</h2>
+                    <p>Insira o link abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="facebook" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <p style="margin-top:12px;">
+                          <button type="button" class="btn btn-lg btn-primary" onclick="gerarLinkFacebook();">Gerar link</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="facebookResult" class="container hidden">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h2>Utilize este link</h2>
+                        <div class="input-group">
+                          <input id="facebookTrackedUrl" type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default copyFB" data-clipboard-target="#facebookTrackedUrl" type="button">Copiar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div id="copy-alert-fb" class="alert alert-success hidden" style="margin-top:12px;">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          O link foi copiado para a área de transferência :)
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                  </div>
+                </div>
+
+                <hr>
+
+                <!-- Twitter -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Twitter</h2>
+                    <p>Insira o tweet abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="twitter" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <p style="margin-top:12px;">
+                          <button type="button" class="btn btn-lg btn-primary" onclick="gerarLinkTwitter();">Gerar link</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="twitterResult" class="container hidden">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h2>Utilize este link</h2>
+                        <div class="input-group">
+                          <input id="twitterTrackedUrl" type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default copyTw" data-clipboard-target="#twitterTrackedUrl" type="button">Copiar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div id="copy-alert-tw" class="alert alert-success hidden" style="margin-top:12px;">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          O link foi copiado para a área de transferência :)
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                  </div>
+                </div>
+
+                <hr>
+
+                <!-- Linkedin -->
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Linkedin</h2>
+                    <p>Insira o link abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="Linkedin" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <p>Insira o título da publicação abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="Linkedin-title" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <p style="margin-top:12px;">
+                          <button type="button" class="btn btn-lg btn-primary" onclick="gerarLinkLinkedin();">Gerar link</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="linkedinResult" class="container hidden">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h2>Utilize este link</h2>
+                        <div class="input-group">
+                          <input id="linkedinTrackedUrl" type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default copyIN" data-clipboard-target="#linkedinTrackedUrl" type="button">Copiar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div id="copy-alert-in" class="alert alert-success hidden" style="margin-top:12px;">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          O link foi copiado para a área de transferência :)
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                  </div>
+                </div>
+
+                <hr>
+
+                <footer>
+                  <p>&copy; Rica 2016</p>
+                </footer>
+
+              </div> <!-- /container -->
+
+              <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+              <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+              <script src="js/vendor/bootstrap.min.js"></script>
+
+              <script src="js/main.js"></script>
+
+              <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+              <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-17738180-4', 'auto');
+              ga('send', 'pageview');
+
+              </script>
+            </body>
+            </html>

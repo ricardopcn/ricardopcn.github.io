@@ -1,0 +1,273 @@
+/* Global styles */
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body{
+	/*background-color: #f0f0f5;*/
+	color: #282828;
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+h1{
+	font-size: 2.25em;
+	font-weight: 100;
+	line-height: 1.25;
+	margin: 0 0 24px 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h2{
+	font-size: 2em;
+	font-weight: 100;
+	line-height: 1.25;
+	margin: 0 0 24px 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+article+article{
+	padding-top: 36px;
+}
+
+a, a:visited{
+	color: #4b647d;
+	font-weight: 700;
+	transition: all 250ms ease-out;
+}
+a:hover, a:focus, a:active{
+	color: #5a7896;
+	text-decoration: none;
+}
+sup{
+	text-decoration: underline;
+}
+
+h2+p{
+	margin-bottom: 30px;
+}
+
+/* Bootstrap overrides */
+
+.navbar {
+	background: #384654;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+.navbar-header, .navbar-brand{
+	padding: 0;
+	margin-left: 0 !important;
+}
+
+.form-control:focus {
+    border-color: rgba(140,175,175,.5);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(140,175,175,.3);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(140,175,175,.3);
+}
+
+.jumbotron{
+	padding: 0;
+}
+.jumbotron p{
+	font-size: 1.25em;
+}
+.jumbotron .btn-primary{
+	font-size: 0.8em;
+}
+
+.btn+.btn{
+	margin: 0 0 0 20px;
+}
+
+.btn-primary{
+	background: #f5be46;
+	border-color: #f5be46;
+	color: #282828 !important;
+	font-weight: 700;
+}
+.btn-primary:hover{
+	background: #ffcd62;
+	border-color: #ffcd62;
+}
+.btn-default{
+	background: #2d3c4b;
+	border-color: #2d3c4b;
+	color: #fff !important;
+	font-weight: 700;
+}
+.btn-default:hover{
+	background: #3c5063;
+	border-color: #3c5063;
+}
+
+
+/* Navbar */
+
+.navbar-brand{
+	background: url('../img/logo.svg') no-repeat center center;
+	display: inline-block;
+	height: 60px;
+	text-indent: -5000px;
+	width: 280px;
+}
+
+a.back-link{
+	color: #fff;
+	display: inline-block;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+a.back-link:before{
+	content: "«";
+	margin: 0 5px 0 0;
+}
+
+/* Jumbotron */
+
+.jumbotron{
+	background: #2d3c4b;
+	color: #fff;
+	margin-bottom: 72px;
+}
+.jumbotron h1{
+	font-size: 3em;
+	margin: 0 0 6px;
+}
+.jumbotron p{
+	margin-bottom: 20px;
+}
+.jumbotron article{
+	padding: 30px 0;
+}
+
+/* Content */
+
+.tool-id{
+	background: #2d3c4b;
+	margin: 0 0 72px 0;
+	padding: 30px 0;
+}
+
+.tool-id h1{
+	color: #fff;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.help{
+	display: inline-block;
+	position: relative;
+	text-indent: -5000px;
+}
+.help:after{
+	content: '\f059';
+	display: block;
+	height: 30px;
+	font-family: FontAwesome;
+	left: 0;
+	margin-left: 3px;
+	position: absolute;
+	text-align: center;
+	text-indent: 0;
+	top: 0;
+	width: 20px;
+}
+
+.help-info .row{
+	border-top: 1px solid #ddd;
+	margin-top: 72px;
+	padding-top: 0;
+}
+.help-info .col-md-4{
+	margin-top: 72px;
+}
+
+/* Footer */
+
+footer{
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+}
+footer p{
+	display: inline-block;
+	font-size: 0.8125em;
+	line-height: 1.5;
+	padding: 5px 0;
+	text-align: center;
+	width: 100%;
+}
+.page-wrap{
+	min-height: 100%;
+	margin-bottom: -50px;
+	padding-bottom: 72px;
+}
+.page-wrap:after {
+	content: "";
+	display: block;
+	height: 50px;
+}
+/* Responsive rules */
+
+@media (max-width: 767px) {
+	.jumbotron .btn{
+		width: 100%;
+	}
+	.btn+.btn{
+		margin: 20px 0 0 0;
+	}
+}
+@media (min-width: 768px) {
+	a.back-link{
+		height: 40px;
+		margin: 0;
+		position: absolute;
+		width: 40px;
+		text-indent: -5000px;
+	}
+	a.back-link:before{
+		border: 1px solid #fff;
+		border-radius: 40px;
+		content: '\f112';
+		color: #fff;
+		display: block;
+		font-family: FontAwesome;
+		font-size: 0.75em;
+		height: 30px;
+		position: absolute;
+		line-height: 30px;
+		margin: 5px 0 0 0;
+		text-align: center;
+		text-indent: 0;
+		width: 30px;
+	}
+	.tool-id h1{
+		text-indent: 50px;
+	}
+}
+@media (min-width: 992px){
+	.jumbotron .col-md-8{
+		display: table;
+	}
+	.jumbotron .col-md-8 article{
+		display: table-cell;
+		height: 290px;
+		vertical-align: middle;
+	}
+}
+@media (min-width: 1200px){
+	.jumbotron .col-md-8 article{
+		height: 360px;
+	}
+}
