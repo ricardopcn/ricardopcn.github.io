@@ -14,52 +14,42 @@ yourtext.onkeyup = function() {
 		words.innerHTML = yourtext.value.split(" ").length + " palavras";
 	}
 
-	// email
-	var email = document.getElementById('email');
+	var feedbackObj = [
+		{
+			type: 'email',
+			condition: 70,
+			message:'O Gmail vai cortar sua mensagem acima de 70 caracteres :/'
+		},
+		{
+			type: 'pageTitle',
+			condition: 55,
+			message:'55 caracteres é o recomendado para não ter seu título cortado pelo google na serp'
+		},
+		{
+			type: 'tweet',
+			condition: 140,
+			message:'O twitter só aceita mensagens com até 140 caracteres'
+		},
+		{
+			type: 'metaDescription',
+			condition: 160,
+			message:'Uma meta description deve conter até 160 caracteres'
+		}
+	];
 
-	if (yourtext.value.length == 0) {
-		email.innerHTML = "não sei, digite um texto";
-	} else if (yourtext.value.length <= 50) {
-		email.innerHTML = "pode usar";
-	} else {
-		email.innerHTML = "não use, o gmail vai cortar o seu assunto";
+	for (var i = 0; i < feedbackObj.length; i++) {
+		setFeedeback(feedbackObj[i]);
 	}
 
-	// twitter
-	var tweet = document.getElementById('tweet');
+	function setFeedeback(obj){
+		var el = document.getElementById(obj.type);
 
-	if (yourtext.value.length == 0) {
-		tweet.innerHTML = "não sei, digite um texto";
-	} else if (yourtext.value.length <= 140) {
-		tweet.innerHTML = "pode usar";
-	} else {
-		tweet.innerHTML = "não use, o Twitter só permite 140 caracteres";
+		if (yourtext.value.length == 0) {
+			el.innerHTML = "não sei, digite um texto";
+		} else if (yourtext.value.length <= obj.condition) {
+			el.innerHTML = "pode usar";
+		} else {
+			el.innerHTML = obj.message;
+		}
 	}
-
-	// page title
-
-	var pageTitle = document.getElementById('pageTitle');
-
-	if (yourtext.value.length == 0) {
-		pageTitle.innerHTML = "não sei, digite um texto";
-	} else if (yourtext.value.length <= 55) {
-		pageTitle.innerHTML = "pode usar";
-	} else {
-		pageTitle.innerHTML = "não use, o Google corta títulos após um determinado tamanho de título. O recomendado é manter até 55 caracteres";
-	}
-
-	// meta description
-
-	var metaDescription = document.getElementById('metaDescription');
-
-	if (yourtext.value.length == 0) {
-		metaDescription.innerHTML = "não sei, digite um texto";
-	} else if (yourtext.value.length <= 160) {
-		metaDescription.innerHTML = "pode usar";
-	} else {
-		metaDescription.innerHTML = "não use, o recomendado para o Google não cortar descrições longas é mantê-la com até 160 caracteres";
-	}
-
-	// promote no Facebook
-
 }

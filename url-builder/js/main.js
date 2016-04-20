@@ -1,8 +1,8 @@
 function trackearUrl() {
   var link        = document.getElementById("link").value;
-  var medium      = document.getElementById("medium").value;
-  var source      = document.getElementById("source").value;
-  var campaign    = document.getElementById("campaign").value;
+  var medium      = removeAccents(document.getElementById("medium").value);
+  var source      = removeAccents(document.getElementById("source").value);
+  var campaign    = removeAccents(document.getElementById("campaign").value);
 
   var new_link  = link
   + "?utm_medium="
@@ -17,6 +17,27 @@ function trackearUrl() {
   document.getElementById('result').classList.remove('hidden');
   document.getElementById('result').classList.add('show');
 
+}
+
+
+function removeAccents (str){
+
+  str = str.toString().toLowerCase().trim();
+
+  // remove accents, swap ñ for n
+  var from = "àáäâèéëêìíïîòóöôùúüûñç";
+  var to   = "aaaaeeeeiiiioooouuuunc";
+  for (var i=0, l=from.length ; i<l ; i++) {
+    str = str.replace(
+      new RegExp(from.charAt(i), 'g'),
+      to.charAt(i)
+    );
+  }
+
+  //str = str.replace(new RegExp(" ", 'g'),"_")
+  str = str.replace(new RegExp(/\W/, 'g'),"_");
+
+  return str;
 }
 
 

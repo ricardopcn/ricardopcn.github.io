@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Gerador de Parâmetros de URL</title>
+  <title>Gerador de Links de Compartilhamento</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -52,124 +52,128 @@
               </div>
 
               <div class="container">
-                <!-- Example row of columns -->
-                <div class="row">
-                  <div class="col-md-4">
-                    <h2>Canal</h2>
-                    <p>canal onde estará a URL</p>
-                    <div class="input-group input-group-lg">
-                      <input id="medium" type="text" class="form-control" aria-describedby="sizing-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <h2>Fonte</h2>
-                    <p>email, referral, banner...</p>
-                    <div class="input-group input-group-lg">
-                      <input id="source" type="text" class="form-control" aria-describedby="sizing-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <h2>Campanha</h2>
-                    <p>nome da campanha</p>
-                    <div class="input-group input-group-lg">
-                      <input id="campaign" type="text" class="form-control" aria-describedby="sizing-addon1">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <h2>Canal</h2>
-                    <p>canal onde estará a URL</p>
-                    <div class="input-group input-group-lg">
-                      <input id="medium" type="text" class="form-control" aria-describedby="sizing-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <h2>Fonte</h2>
-                    <p>email, referral, banner...</p>
-                    <div class="input-group input-group-lg">
-                      <input id="source" type="text" class="form-control" aria-describedby="sizing-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <h2>Campanha</h2>
-                    <p>nome da campanha</p>
-                    <div class="input-group input-group-lg">
-                      <input id="campaign" type="text" class="form-control" aria-describedby="sizing-addon1">
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="container">
-                  <div class="row">
-                    <p style="margin-top:12px;">
-                      <button type="button" class="btn btn-lg btn-primary" onclick="trackearUrl();">Trackear URL</button>
-                    </p>
-                  </div>
-                </div>
-                
 
-                <div id="result" class="container hidden">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <h2>Utilize este link</h2>
-                      <div class="input-group">
-                        <input id="tracked_url" type="text" class="form-control" placeholder="seu link aparecerá aqui">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default copy" data-clipboard-target="#tracked_url" type="button">Copiar</button>
-                        </span>
-                      </div><!-- /input-group -->
-                      <div id="copy-alert" class="alert alert-success hidden" style="margin-top:12px;">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        O link foi copiado para a área de transferência :)
+                <!-- Facebook -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Facebook</h2>
+                    <p>Insira o link abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="facebook" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <p style="margin-top:12px;">
+                          <button type="button" class="btn btn-lg btn-primary" onclick="gerarLinkFacebook();">Gerar link</button>
+                        </p>
                       </div>
-                    </div><!-- /.col-lg-6 -->
-                  </div><!-- /.row -->
+                    </div>
+                  </div>
+                  <div id="facebookResult" class="container hidden">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h2>Utilize este link</h2>
+                        <div class="input-group">
+                          <input id="facebookTrackedUrl" type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default copyFB" data-clipboard-target="#facebookTrackedUrl" type="button">Copiar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div id="copy-alert-fb" class="alert alert-success hidden" style="margin-top:12px;">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          O link foi copiado para a área de transferência :)
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                  </div>
                 </div>
+
+                <hr>
+
+                <!-- Twitter -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Twitter</h2>
+                    <p>Insira o tweet abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="twitter" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <p style="margin-top:12px;">
+                          <button type="button" class="btn btn-lg btn-primary" onclick="gerarLinkTwitter();">Gerar link</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="twitterResult" class="container hidden">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h2>Utilize este link</h2>
+                        <div class="input-group">
+                          <input id="twitterTrackedUrl" type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default copyTw" data-clipboard-target="#twitterTrackedUrl" type="button">Copiar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div id="copy-alert-tw" class="alert alert-success hidden" style="margin-top:12px;">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          O link foi copiado para a área de transferência :)
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                  </div>
+                </div>
+
+                <hr>
+
+                <!-- Linkedin -->
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Linkedin</h2>
+                    <p>Insira o link abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="Linkedin" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <p>Insira o título da publicação abaixo</p>
+                    <div class="input-group input-group-lg">
+                      <input id="Linkedin-title" type="text" class="form-control" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <p style="margin-top:12px;">
+                          <button type="button" class="btn btn-lg btn-primary" onclick="gerarLinkLinkedin();">Gerar link</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="linkedinResult" class="container hidden">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h2>Utilize este link</h2>
+                        <div class="input-group">
+                          <input id="linkedinTrackedUrl" type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default copyIN" data-clipboard-target="#linkedinTrackedUrl" type="button">Copiar</button>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div id="copy-alert-in" class="alert alert-success hidden" style="margin-top:12px;">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          O link foi copiado para a área de transferência :)
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                  </div>
+                </div>
+
                 <hr>
 
                 <footer>
                   <p>&copy; Rica 2016</p>
                 </footer>
 
-              </div> <!-- /container -->    
-
-              <script>
-              function trackearUrl() {
-                var link        = document.getElementById("link").value;
-                var medium      = document.getElementById("medium").value;
-                var source      = document.getElementById("source").value;
-                var campaign    = document.getElementById("campaign").value;
-
-                var new_link  = link
-                + "?utm_medium="
-                + medium
-                + "?utm_source="
-                + source
-                + "?utm_campaign="
-                + campaign;
-
-                document.getElementById("tracked_url").value = new_link;
-
-                document.getElementById('result').classList.remove('hidden');
-                document.getElementById('result').classList.add('show');
-
-              }
-              </script>
-              
-              <script>
-              var clipboard = new Clipboard('.copy');
-
-              clipboard.on('success', function(e) {
-                console.log(e);
-                document.getElementById('copy-alert').classList.remove('hidden');
-                document.getElementById('copy-alert').classList.add('show');
-              });
-
-              clipboard.on('error', function(e) {
-                console.log(e);
-              });
-              </script>
+              </div> <!-- /container -->
 
               <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
               <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -180,12 +184,14 @@
 
               <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
               <script>
-              (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-              e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-              e.src='//www.google-analytics.com/analytics.js';
-              r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-              ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-17738180-4', 'auto');
+              ga('send', 'pageview');
+
               </script>
             </body>
             </html>
