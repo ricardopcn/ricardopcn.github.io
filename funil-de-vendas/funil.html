@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Diagnóstico do funil de vendas | Resultados Digitais</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  <!-- OG -->
+	<meta property="og:title" content="Gerador de Jornada de Compra" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://ferramentas.resultadosdigitais.com.br/ferramenta-jornada/" />
+	<meta property="og:image" content="http://ferramentas.resultadosdigitais.com.br/ferramenta-jornada/images/jornada_compra_og.png" />
+	<meta property="og:description" content="Defina e conheça de forma rápida e fácil os passos que os seus potenciais clientes dão até estarem prontos para comprar seu produto ou serviço." />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+<link rel="manifest" href="../img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" media="print" href="css/print.css"> -->
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- <script src="javascripts/lib/jquery-1.12.4.min.js"></script>
+  <script src="javascripts/lib/bootstrap.min.js"></script> -->
+
+  <script type ='text/javascript' src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>
+
+  <script src="javascripts/src/copyTarget.js"></script>
+  <script src="javascripts/src/hashData.js"></script>
+  <script src="javascripts/src/funnel.js"></script>
+  <script src="javascripts/src/benchmarking.js"></script>
+  <script src="javascripts/src/main.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img class="brand "alt="Brand" src="images/logo-resultados-digitais.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="title-page container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Diagnóstico do funil de vendas</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div id="funnel" class="container-fluid myFunnel">
+  <div class="container">
+    <div class="col-md-offset-3 col-md-6">
+      <!-- <div class="copyFunnel">
+        <h1>h1 aqui</h1>
+      </div> -->
+      <form data-target="#results">
+        <div class="funnel">
+          <div class="visitors">
+            <label for="visitors">Visitantes<a data-toggle="modal" data-target="#modalVisitors"><i class="glyphicon glyphicon-question-sign"></i></a></label>
+            <input type="text" class="form-control" id="visitors">
+          </div>
+          <div class="leads">
+            <label for="leads">Leads<a data-toggle="modal" data-target="#modalLeads"><i class="glyphicon glyphicon-question-sign"></i></a></label>
+            <input type="text" class="form-control" id="leads">
+          </div>
+          <div class="opportunities">
+            <label for="opportunities">Oportunidades<a data-toggle="modal" data-target="#modalOpportunities"><i class="glyphicon glyphicon-question-sign"></i></a></label>
+            <input type="text" class="form-control" id="opportunities">
+          </div>
+          <div class="sales">
+            <label for="sales">Vendas<a data-toggle="modal" data-target="#modalSales"><i class="glyphicon glyphicon-question-sign"></i></a></label>
+            <input type="text" class="form-control" id="sales">
+          </div>
+        </div>
+        <div class="box-gray">
+          <label for="average_ticket">Ticket médio (valor médio da venda de uma unidade do seu produto ou serviço)</label>
+          <input type="text" class="form-control" id="average_ticket">
+        </div>
+        <a id="calculate" href="#resultados" class="btn btn-lg btn-success full-width">Analisar meu funil</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="resultados" class="container-fluid resultFunnel hidden">
+  <div class="container">
+    <div class="col-md-12 titleResult">
+      <h2>Aqui está seu resultado</h2>
+      <p>Abaixo você encontra as suas taxas de conversão atuais e as taxas médias da sua área de atuação: <span id="segment" class="activity">????</span></p>
+    </div>
+    <div class="col-md-6">
+      <h3>Seu funil</h3>
+      <div class="funnel">
+        <div class="visitors">
+          <h6>Visitantes</h6>
+          <h2 class="amount">????</h2>
+          <span class="myRates success">?</span>
+        </div>
+        <div class="leads">
+          <h6>Leads</h6>
+          <h2 class="amount">????</h2>
+          <span class="myRates warning">?</span>
+        </div>
+        <div class="opportunities">
+          <h6>Oportunidades</h6>
+          <h2 class="amount">????</h2>
+          <span class="myRates danger">?</span>
+        </div>
+        <div class="sales">
+          <h6>Vendas</h6>
+          <h2 class="amount">????</h2>
+        </div>
+      </div>
+      <div class="average_ticket revenue">
+        <p>Ticket médio</p>
+        <h3 class="amount">????</h3>
+        <p>Faturamento médio</p>
+        <h3 class="average_revenue success">????</h3>
+      </div>
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+      <h3>Benchmarking</h3>
+      <div class="benchmarking">
+        <div class="visitorsToleads js-visitors-to-leads">
+          <div class="feedbackBubble">
+            <p class="result">A taxa média do seu benchmarking de visitantes para Leads é <span class="js-benchmarkingRates">20</span>%</p>
+            <p class="js-benchmarkingComparison">Você está abaixo da média do segmento de Financeiro, Jurídico e Serviços Relacionados. Tem que ver isso aí!</p>
+            <span class="benchmarkingRates js-benchmarkingRates">20</span>
+          </div>
+        </div>
+        <div class="leadsToopps js-leads-to-opportunities">
+          <div class="feedbackBubble">
+            <p class="result">A taxa média do seu benchmarking de Leads para oportunidades é <span class="js-benchmarkingRates">20</span>%</p>
+            <p class="js-benchmarkingComparison">Você está acima da média. Muito bom!</p>
+            <span class="benchmarkingRates js-benchmarkingRates">20</span>
+          </div>
+        </div>
+        <div class="oppsTosales js-opportunities-to-sales">
+          <div class="feedbackBubble">
+            <p class="result">A taxa média do seu benchmarking de oportunidades para vendas é <span class="js-benchmarkingRates">20</span>%</p>
+            <p class="js-benchmarkingComparison">Você está abaixo da média do segmento de Financeiro, Jurídico e Serviços Relacionados. Tem que ver isso aí!</p>
+            <span class="benchmarkingRates js-benchmarkingRates">20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 actionBench">
+      <a href="#potencial" class="btn btn-lg btn-success">Aplicar taxas de benchmarking</a>
+    </div>
+  </div>
+</div>
+
+<div id="potencial" class="container-fluid idealFunnel hidden">
+  <div class="container">
+    <div class="col-md-6">
+      <div class="funnel">
+        <div class="visitors">
+          <h6>Visitantes</h6>
+          <h2 class="amount">????</h2>
+          <span class="myRates success js-idealRates">20</span>
+        </div>
+        <div class="leads">
+          <h6>Leads</h6>
+          <h2 class="amount">????</h2>
+          <span class="myRates success js-idealRates">20</span>
+        </div>
+        <div class="opportunities">
+          <h6>Oportunidades</h6>
+          <h2 class="amount">????</h2>
+          <span class="myRates success js-idealRates">20</span>
+        </div>
+        <div class="sales">
+          <h6>Vendas</h6>
+          <h2 class="amount">????</h2>
+        </div>
+      </div>
+      <div class="revenue average_ticket">
+        <p>Ticket médio</p>
+        <h3 class="amount">????</h3>
+        <p>Faturamento médio</p>
+        <h3 class="average_revenue success">????</h3>
+      </div>
+    </div>
+    <div class="col-md-offset-1 col-md-5 js-funnelComparison">
+      <h2>Lorem Ipsum</h2>
+      <blockquote>O potencial de aumento do seu faturamento é de <strong>320%</strong> o que representa <strong>R$345.565,00</strong> a mais no seu faturamento!</blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <div class="raised-hand">
+        <a href="#" id="contactBtn" class="btn btn-lg btn-success">Fale com um consultor</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="actions navbar-fixed-bottom">
+        <a id="copyModalBtn" data-toggle="modal" data-target="#modalLink"><i class="glyphicon glyphicon-link"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Link -->
+<div id="modalLink" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Copie a URL do seu funil</h4>
+      </div>
+      <div class="modal-body">
+        <img src="images/funneltourl.svg">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-link"></span></span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" id="copyTarget" ng-model="PageUrl">
+          <span class="input-group-btn">
+            <a class="btn btn-default btn-copy" id="copyButton" type="button" title="" data-original-title="Link copiado!">Copiar</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Visitantes -->
+
+<div id="modalVisitors" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Visitante</h4>
+      </div>
+      <div class="modal-body">
+          <p>Quantos visitantes o site da sua empresa recebe, em média, por mês? Entendemos que o site ou blog é a porta de entrada para seus potenciais clientes conhecerem sua empresa. Também consideramos os visitantes o início do funil de vendas, que irá se descobrar em Leads, Oportunidades de negócio e Vendas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalLeads" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Leads</h4>
+      </div>
+      <div class="modal-body">
+          <p>Leads são os visitantes que se interessaram por sua empresa e deixaram informações de contato (como nome, email e cargo, entre outras) em troca de um conteúdo rico (eBooks e webinars, por exemplo) ou de informações sobre um determinado produto ou serviço. Podem ser também as pessoas que preencheram um formulário de contato em seu site.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalOpportunities" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Oportunidades</h4>
+      </div>
+      <div class="modal-body">
+          <p>Consideramos oportunidades de negócio os Leads mais quentes aqueles que sua empresa considera mais qualificados para serem trabalhados por algum vendedor. Caso você não saiba quantas oportunidades recebe por mês, coloque a mesma quantidade que você colocou em "Leads".</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalSales" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Vendas</h4>
+      </div>
+      <div class="modal-body">
+          <p>Aqui entram as vendas que sua empresa realiza no período que você escolheu para a análise.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <footer class="footer text-center">
+  <div class="container">
+    <img class="brand" src="images/logo-resultados-digitais-original.svg" alt="Logo Resultados Digitais">
+  </div>
+</footer>
+
+
+  </body>
+
+</html>
