@@ -57,7 +57,7 @@
         $(function() {
             $.getJSON('resources.json', function(data) {
               var template = $('contenttpl').html();
-              var html = Mustache.to_html(template, data);
+              var html = Mustache.render(template, data);
               $('#resourcespage').html(html);
             });
         });
