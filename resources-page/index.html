@@ -51,14 +51,12 @@
 
     <script src="js/vendor/bootstrap.min.js"></script>
 
-    <script src="js/main.js"></script>
-
     <script type="text/javascript">
         $(function() {
             $.getJSON('data.json', function(data) {
-              var template = $('contenttpl').html();
-              var html = Mustache.render(template, data);
-              $('#resourcespage').html(html);
+                var template = $('contenttpl').html();
+                var html = Mustache.render(template, data);
+                $('#resourcespage').html(html);
             });
         });
     </script>
