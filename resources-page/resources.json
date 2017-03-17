@@ -1,0 +1,23 @@
+{
+    "contentdata": [{
+        "resource-type": "eBook",
+        "cta-text": "Baixar eBook",
+        "resource-name": "X Formas de Y",
+        "resource-url": "http://google.com.br"
+    }, {
+        "resource-type": "Webinar",
+        "cta-text": "Acessar Webinar",
+        "resource-name": "O melhor de todos",
+        "resource-url": "http://google.com.br"
+    }, {
+        "resource-type": "Ferramenta",
+        "cta-text": "Acessar Ferramenta",
+        "resource-name": "Guia completo XYZ",
+        "resource-url": "http://google.com.br"
+    }, {
+        "resource-type": "eBook",
+        "cta-text": "BaixareBook",
+        "resource-name": "Muitas formas de Y",
+        "resource-url": "http://google.com.br"
+    } ]
+}
