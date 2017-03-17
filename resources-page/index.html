@@ -29,8 +29,11 @@
 
 <body>
     <div class="container">
-        <div id="resourcespage"></div>
-        <script id="contenttpl" type="x-tmpl-mustache">
+        <div id="resourcespage">
+
+        </div>
+
+        <script id="template" type="x-tmpl-mustache">
             {{#contentdata}}
             <div class="row">
                 <div class="col-md-12">
@@ -54,8 +57,8 @@
     <script type="text/javascript">
         $(function() {
             $.getJSON('data.json', function(data) {
-                var template = $('contenttpl').html();
-                var html = Mustache.render(template, data);
+                var rendered = $('template').html();
+                var html = Mustache.render(rendered, data);
                 $('#resourcespage').html(html);
             });
         });
