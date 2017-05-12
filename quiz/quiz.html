@@ -1,0 +1,114 @@
+<section class="inside" ng-show="inProgress">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div ng-hide="hideProgress" class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{completed_percentage}}%;">
+						<span class="sr-only">{{completed_percentage}}% completado</span>
+					</div>
+				</div>
+				<div ng-show="!quizOver">
+					<h1 id="question">{{question}}</h1>
+					<ul id="options">
+						<li ng-repeat="option in options">
+							<label>
+								<input type="radio" name="answer" value="{{option}}">
+								{{option}}
+							</label>
+						</li>
+					</ul>
+					<div class="action">
+						<button ng-click="checkAnswer()" class="btn btn-primary btn-lg">Próxima pergunta</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="inside" ng-show="inProgress">
+	<div class="container">
+
+		<div class="results" ng-show="quizOver">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<img alt="nível" src="{{level.image}}" class="img-responsive">
+				</div>
+				<div class="col-md-8 col-md-offset-2">
+					<h1 class="level">{{level.title}}</h1>
+					<p class="advice">{{level.text}} <strong>Você acertou <span>{{score}}</span> questões de <span>{{maximun_score}}</span></strong>.</p>
+					<!--<p class="bg-success">Sabe qual a avaliação de Marketing e Vendas da sua empresa? Faça um <a href="http://ferramentas.resultadosdigitais.com.br/diagnostico-marketing-vendas/" target="_blank">diagnóstico online gratuito de Marketing e Vendas</a> e veja como melhorar seus resultados.</p>
+					<p class="bg-success">Como está a gestão de mídias sociais na sua empresa? <a href="http://scup.com/pt/signup?utm_source=quiz_rd&utm_medium=site&utm_campaign=quiz_rd" target="_blank">Faça um teste gratuito do Scup<a/> leve os resultados para o próximo nível.</p>-->
+					<!--<p class="social">
+						<button ng-click="shareFacebook()" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</button>
+						<button ng-click="shareTwitter()" class="btn btn-primary btn-lg"><i class="fa fa-twitter"></i> Twitter</button>
+						<button ng-click="shareLinkedIn()" class="btn btn-primary btn-lg"><i class="fa fa-linkedin"></i> LinkedIn</button>
+					</p>-->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div id="links" class="links-list" ng-hide="wrong_questions.length == 0">
+						<h2>Questões que você errou:</h2>
+						<ul>
+							<li ng-repeat="wrong_question in wrong_questions">
+								{{wrong_question.question}}
+								<ul>
+									<li ng-repeat="link in wrong_question.links">
+										<a href="{{link.link}}" title="{{link.name}}" target="_blank">{{link.name}}</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class="intro" ng-show="!inProgress">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<img class="img-responsive hidden-xs" style="margin: 15px auto; max-height: 250px;" src="http://images.clipartpanda.com/holy-spirit-dove-drawing-holy_trinity.gif"/>
+				<h1>Quiz</h1>
+				<h2>Mostre o que você sabe (ou não) sobre o assunto!</h2>
+				<form>
+					<!-- <div class="form-group">
+						<input type="text" class="form-control input-lg" ng-model="name" placeholder="Nome">
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control input-lg" ng-model="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<select class="form-control input-lg" ng-model="segment" id="custom_fields_98" name="custom_fields[98]">
+
+							<option value="" disabled selected>Área de atuação da empresa</option>
+							<option value="Software e Cloud">Software e Cloud</option>
+							<option value="Hardware">Hardware</option>
+							<option value="Telecomunicações">Telecomunicações</option>
+							<option value="Educação">Educação</option>
+							<option value="Agência">Agência</option>
+							<option value="Veículo de comunicação">Veículo de comunicação</option>
+							<option value="Consultoria">Consultoria</option>
+							<option value="Serviços corporativos">Serviços corporativos</option>
+							<option value="Ecommerce">Ecommerce</option>
+							<option value="Serviços para o consumidor">Serviços para o consumidor</option>
+							<option value="Turismo e Lazer">Turismo e Lazer</option>
+							<option value="Saúde">Saúde</option>
+							<option value="Industria de manufatura">Industria de manufatura</option>
+							<option value="RH e Recrutamento">RH e Recrutamento</option>
+							<option value="Serviços financeiros">Serviços financeiros</option>
+							<option value="Jurídico">Jurídico</option>
+							<option value="Imóveis">Imóveis</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="site" class="form-control input-lg" ng-model="website" placeholder="Site da Empresa">
+					</div> -->
+					<button id="startQuiz" class="btn btn-default btn-block btn-lg" ng-disabled="" ng-click="start()">Começar!</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
